@@ -2,6 +2,7 @@ alias rake="bundle exec rake"
 alias be="bundle exec"
 alias db_migrate="bin/rails db:migrate RAILS_ENV=development"
 alias sql='mysql -u root -P "$MYSQL_PORT"'
+alias refresh="git pull origin main && bundle install && rake db:migrate"
 
 # Periodically Spin loses its session for bundler to install private gems. Running either of these fixes the problem.
 alias bundler_fix='bundle config --global PKGS__SHOPIFY__IO "token:$(gsutil cat gs://dev-tokens/cloudsmith/shopify/gems/latest)"'
