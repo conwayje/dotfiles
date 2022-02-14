@@ -5,6 +5,7 @@ alias sql='mysql -u root -P "$MYSQL_PORT"'
 alias refresh="git pull origin main && bundle install && rake db:migrate"
 alias compare="git diff HEAD~1 HEAD~0"
 alias list_aliases="cat ~/.zshrc | grep alias"
+alias amend="git commit --amend -C HEAD"
 
 function show_alias() {
   cat ~/.zshrc | grep "alias $1="
