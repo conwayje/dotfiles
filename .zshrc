@@ -6,6 +6,11 @@ alias refresh="git pull origin main && bundle install && rake db:migrate"
 alias compare="git diff HEAD~1 HEAD~0"
 alias list_aliases="cat ~/.zshrc | grep alias"
 alias amend="git commit --amend -C HEAD"
+alias fpush="git push --force"
+alias pushf="git push --force"
+alias pull="git pull"
+alias gc-="git checkout -"
+alias m="git checkout main"
 
 function show_alias() {
   cat ~/.zshrc | grep "alias $1="
