@@ -45,6 +45,7 @@ alias packwerk_check='dev packages check'
 alias graphql_dump='dev dump-graphql admin'
 
 alias copme='rubocop_check'
+alias lintme='rubocop_check'
 alias typeme='sorbet_check'
 alias packme='packwerk_check'
 alias graphme='graphql_dump'
