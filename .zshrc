@@ -11,6 +11,7 @@ alias pushf="git push --force"
 alias pull="git pull"
 alias gc-="git checkout -"
 alias m="git checkout main"
+alias gaa="git add --all"
 
 function show_alias() {
   cat ~/.zshrc | grep "alias $1="
