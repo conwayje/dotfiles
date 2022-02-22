@@ -62,3 +62,15 @@ kill_process() {
 
 # Spin default setup
 source /etc/zsh/zshrc.default.inc.zsh
+
+function git_branch() {
+  branch=$(git branch --show-current 2> /dev/null)
+  if [[ $branch == "" ]]; then
+    echo ' '
+  else
+    echo ' ('$branch') '
+  fi
+}
+
+setopt prompt_subst
+PROMPT='%c%F{magenta}$(git_branch)%f$ '
