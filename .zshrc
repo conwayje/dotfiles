@@ -73,4 +73,4 @@ function git_branch() {
 }
 
 setopt prompt_subst
-PROMPT='> %c%F{magenta}$(git_branch)%f$ '
+PROMPT='/%c%F{magenta}$(git_branch)%f$ '
