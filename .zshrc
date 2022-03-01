@@ -6,12 +6,16 @@ alias refresh="git pull origin main && bundle install && rake db:migrate"
 alias compare="git diff HEAD~1 HEAD~0"
 alias list_aliases="cat ~/.zshrc | grep alias"
 alias amend="git commit --amend -C HEAD"
-alias fpush="git push --force"
-alias pushf="git push --force"
+alias fpush='git push --force origin "$(git symbolic-ref --short HEAD)"'
+alias pushf='git push --force origin "$(git symbolic-ref --short HEAD)"'
 alias pull="git pull"
 alias gc-="git checkout -"
 alias m="git checkout main"
 alias gaa="git add --all"
+alias gr="git reset --hard HEAD"
+alias gpull='git pull origin "$(git symbolic-ref --short HEAD)"'
+alias gpush='git push origin "$(git symbolic-ref --short HEAD)"'
+alias gquick='gaa && amend && fpush'
 
 function show_alias() {
   cat ~/.zshrc | grep "alias $1="
