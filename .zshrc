@@ -72,9 +72,13 @@ function git_branch() {
   if [[ $branch == "" ]]; then
     echo ' '
   else
-    echo ' ('$branch') '
+    echo '\e[35m('$branch')\e[0m '
   fi
 }
 
+precmd() {
+ git_branch
+}
+
 setopt prompt_subst
-PROMPT='/%c%F{magenta}$(git_branch)%f$ '
+PROMPT='/%c $ '
