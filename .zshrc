@@ -54,7 +54,7 @@ alias lintme='rubocop_check'
 alias typeme='sorbet_check'
 alias packme='packwerk_check'
 alias graphme='graphql_dump'
-alias squashme='ruby git_helper.rb'
+alias squashme='ruby ~/dotfiles/git_helper.rb'
 
 port_process() {
   lsof -n -i4TCP:$1 | grep LISTEN
