@@ -56,6 +56,12 @@ alias packme='packwerk_check'
 alias graphme='graphql_dump'
 alias squashme='ruby ~/dotfiles/git_helper.rb'
 
+alias sfr-stop='systemctl stop proc-shopify--storefront-renderer@server.service'
+alias sfr-start='systemctl start proc-shopify--storefront-renderer@server.service'
+alias debug-sfr='PRY=1 bundle exec rake server_isospin'
+alias nuke-sfr='lsof -ti:6115 | xargs kill -9'
+alias sfr-logs='journalctl -fu proc-shopify--storefront-renderer@server.service'
+
 port_process() {
   lsof -n -i4TCP:$1 | grep LISTEN
 }
