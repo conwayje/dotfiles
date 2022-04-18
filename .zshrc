@@ -62,6 +62,9 @@ alias debug-sfr='PRY=1 bundle exec rake server_isospin'
 alias nuke-sfr='lsof -ti:6115 | xargs kill -9'
 alias sfr-logs='journalctl -fu proc-shopify--storefront-renderer@server.service'
 
+alias shopify-debug="FEATURE_SET=default PRIVACY_LEVEL=default DISABLE_INLINE_JOBS=1 bin/rails server"
+alias shopify-stop="systemctl stop proc-shopify--shopify@server.service"
+
 port_process() {
   lsof -n -i4TCP:$1 | grep LISTEN
 }
