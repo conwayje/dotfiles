@@ -73,6 +73,7 @@ alias core-logs='journalctl -fu proc-shopify--shopify@server.service'
 
 alias shopify-debug="FEATURE_SET=default PRIVACY_LEVEL=default DISABLE_INLINE_JOBS=1 bin/rails server"
 alias shopify-stop="systemctl stop proc-shopify--shopify@server.service"
+alias shopify-start="systemctl start proc-shopify--shopify@server.service"
 alias git-commands="echo 'If you want to rebase your last N commits onto an up-to-date base branch, use:
 
   git rebase --onto the-base-branch-name HEAD~N # while you are on your working branch
