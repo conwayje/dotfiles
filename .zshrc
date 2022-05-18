@@ -52,7 +52,7 @@ alias graphql_dump='dev dump-graphql admin'
 alias copme='rubocop_check'
 alias lintme='rubocop_check'
 alias typeme='sorbet_check'
-alias packme='packwerk_check'
+alias packme='bin/packwerk update-deprecations'
 alias graphme='graphql_dump'
 alias squashme='ruby ~/dotfiles/git_helper.rb'
 
