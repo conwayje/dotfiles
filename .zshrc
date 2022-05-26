@@ -67,6 +67,7 @@ alias procs='systemctl list-units "proc*"'
 alias core-stop='systemctl stop proc-shopify--shopify@server.service'
 alias core-start='systemctl start proc-shopify--shopify@server.service'
 alias debug-core='FEATURE_SET=default PRIVACY_LEVEL=default DISABLE_INLINE_JOBS=1 bin/rails server'
+alias port-fix="echo 'lsof -ti:xxxx | xargs kill -9 # replace xxxx with the port number in the error'"
 
 alias web-logs='journalctl -fu proc-shopify--web@server.service'
 alias core-logs='journalctl -fu proc-shopify--shopify@server.service'
