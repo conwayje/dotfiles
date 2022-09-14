@@ -55,6 +55,7 @@ alias typeme='sorbet_check'
 alias packme='bin/packwerk update-deprecations'
 alias graphme='graphql_dump'
 alias squashme='ruby ~/dotfiles/git_helper.rb'
+alias tellme='ruby ~/dotfiles/tell_me.rb'
 
 alias sfr-stop='systemctl stop proc-shopify--storefront-renderer@server.service'
 alias sfr-start='systemctl start proc-shopify--storefront-renderer@server.service'
