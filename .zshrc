@@ -57,6 +57,8 @@ alias graphme='graphql_dump'
 alias squashme='ruby ~/dotfiles/git_helper.rb'
 alias tellme='ruby ~/dotfiles/tell_me.rb'
 
+alias debug_help='echo "worker_timeout(246060) if ENV[\"RAILS_ENV\"] == \"development\" # << config/puma.rc << DO NOT APPROVE ANY PR WHICH INCLUDES THIS LINE"'
+
 alias sfr-stop='systemctl stop proc-shopify--storefront-renderer@server.service'
 alias sfr-start='systemctl start proc-shopify--storefront-renderer@server.service'
 alias debug-sfr='PRY=1 bundle exec rake server_isospin'
