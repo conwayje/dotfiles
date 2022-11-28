@@ -76,6 +76,8 @@ alias start-core='core-start'
 alias debug-core='core-debug'
 alias fix-port='port-fix'
 
+alias sfr-unfuck='SHOPIFY_MYSQL_PORT=40452 bundle exec rake db:dump_core'
+
 alias web-logs='journalctl -fu proc-shopify--web@server.service'
 alias core-logs='journalctl -fu proc-shopify--shopify@server.service'
 
